@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: #f8fafc;
+  font-family: Inter, system-ui, sans-serif;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.hvai-gradient {
+  background: linear-gradient(
+    -45deg,
+    #8b5cf6,
+    #60a5fa,
+    #5ecad8,
+    #8b5cf6
+  );
+
+  background-size: 400% 400%;
+  animation: gradientShift 12s ease infinite;
+}
