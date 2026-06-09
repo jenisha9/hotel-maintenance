@@ -1,50 +1,61 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Hotel Maintenance AI</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Maintenance Inspector</title>
+
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <div class="container">
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Maintenance Insights</h1>
+        
+        </div>
+    </section>
 
-        <h1>
-            Finding maintenance issues humans miss with AI —
-            before they become guest complaints.
-        </h1>
+    <section class="demo-card">
 
-        <p>
-            Upload two inspection images for comparison.
-        </p>
+        <h2>Screw holes filled but surface left bumpy</h2>
 
-        <div class="upload-section">
+        <div class="comparison-grid">
 
-            <div>
-                <label>Reference Image</label>
-                <input type="file">
+            <div class="image-card">
+                <h3>Before</h3>
+                <img src="before.jpg" alt="Before">
             </div>
 
-            <div>
-                <label>Inspection Image</label>
-                <input type="file">
+            <div class="image-card">
+                <h3>After</h3>
+                <img src="after.jpg" alt="After">
             </div>
 
         </div>
 
-        <textarea
-            placeholder="Additional notes..."
-            rows="5">
-        </textarea>
+        <div class="slider-container">
 
-        <button>
-            Analyze Images
-        </button>
+            <img src="after.jpg" class="slider-image">
 
-        <div class="results">
-            Results will appear here.
+            <div class="before-layer">
+                <img src="before.jpg" class="slider-image">
+            </div>
+
+            <div class="slider-line"></div>
+
+            <input
+                type="range"
+                min="0"
+                max="100"
+                value="50"
+                id="slider">
+
         </div>
 
-    </div>
+    </section>
+
+    <script src="script.js"></script>
 
 </body>
 </html>
